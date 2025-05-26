@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const Produto = require('../models/produto'); // ajuste esse caminho se necessário
+const Produto = require('../models/produto'); 
 
-// Rota GET /api/produtos
+
 router.get('/', async (req, res) => {
   try {
     const produtos = await Produto.find();

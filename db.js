@@ -1,4 +1,4 @@
-// db.js
+
 const mongoose = require('mongoose');
 
 const connectDB = async () => {
@@ -10,7 +10,7 @@ const connectDB = async () => {
     console.log('Conectado ao MongoDB');
   } catch (error) {
     console.error('Erro ao conectar no MongoDB:', error);
-    process.exit(1); // Encerra o processo se falhar
+    process.exit(1);
   }
 };
 

@@ -1,9 +1,8 @@
 const express = require('express');
-const router = express.Router();  // <-- DEFINIÇÃO DO ROUTER
+const router = express.Router();  
 const FoodTruck = require('../models/FoodTruck');
-const Produto = require('../models//produto');  // não esqueça de importar o modelo Produto
+const Produto = require('../models//produto');  
 
-// rota para listar todos os food trucks
 router.get('/', async (req, res) => {
   try {
     const foodTrucks = await FoodTruck.find();
@@ -13,7 +12,7 @@ router.get('/', async (req, res) => {
   }
 });
 
-// rota para buscar food truck específico e seus produtos
+
 router.get('/:id', async (req, res) => {
   try {
     const foodTruck = await FoodTruck.findById(req.params.id);
